@@ -1,0 +1,6 @@
+pdf->AddPage();
+$pdf->Write(0, 'Hello World PDF');
+
+$pdf->Output('test.pdf', 'F'); // sauvegarde fichier
+echo "PDF généré";
+

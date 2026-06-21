@@ -1,1 +1,1 @@
-# Plate-forme-de-Gestion-Intelligente
+# Plate-forme-de-gestion-intelligente
