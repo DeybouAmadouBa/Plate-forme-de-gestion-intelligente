@@ -101,6 +101,7 @@ rendez_vous.php
 🛠️ Technologies utilisées
 
 - PHP 7+
+- Vs Code
 - MySQL / MariaDB
 - Bootstrap 5
 - TCPDF (PDF)
@@ -133,9 +134,7 @@ git clone https://github.com/DeybouAmadouBa/Plate-forme-de-Gestion-Intelligente.
 
 ---
 
-2. Copier dans serveur local
-
-/var/www/html/
+2. Copier dans serveur //100.115.92.202/... 
 
 ---
 
@@ -159,7 +158,7 @@ Connexion OK
 
 5. Lancer le projet
 
-http://localhost/Plate-forme-de-gestion-intelligente
+http://100.115.92.202/Plate-forme-de-gestion-intelligente/
 
 ---
 
