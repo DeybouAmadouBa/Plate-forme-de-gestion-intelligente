@@ -1,0 +1,14 @@
+<?php
+require 'db.php';
+?>
+
+<h2>Cours en direct</h2>
+
+<?php
+$result = $conn->query("SELECT * FROM live_cours");
+
+while($row = $result->fetch_assoc()){
+    echo "<h3>".$row['titre']."</h3>";
+    echo "<a href='".$row['lien']."' target='_blank'>Rejoindre</a><hr>";
+}
+?>
