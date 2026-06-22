@@ -1,0 +1,30 @@
+<?php
+require 'db.php';
+require 'auth.php';
+checkRole('prof');
+
+if(isset($_POST['submit'])){
+    $titre = $_POST['titre'];
+    $type = $_POST['type'];
+    $desc = $_POST['description'];
+    $prof = $_SESSION['user_id'];
+
+    $conn->query("INSERT INTO devoirs(titre,type,description,professeur_id)
+                  VALUES('$titre','$type','$desc','$prof')");
+}
+?>
+
+<form method="POST">
+    <input type="text" name="titre"><br>
+
+    <select name="type">
+        <option>TD</option>
+        <option>TP</option>
+        <option>Devoir</option>
+        <option>TC</option>
+    </select><br>
+
+    <textarea name="description"></textarea><br>
+
+    <button name="submit">Ajouter devoir</button>
+</form>
