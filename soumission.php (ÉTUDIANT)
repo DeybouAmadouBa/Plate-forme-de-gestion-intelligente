@@ -1,0 +1,21 @@
+<?php
+require 'db.php';
+require 'auth.php';
+checkRole('etudiant');
+
+$devoir_id = $_GET['id'];
+$etudiant_id = $_SESSION['user_id'];
+
+if(isset($_POST['submit'])){
+    $file = $_FILES['fichier']['name'];
+    move_uploaded_file($_FILES['fichier']['tmp_name'], "uploads/".$file);
+
+    $conn->query("INSERT INTO soumissions(etudiant_id,devoir_id,fichier)
+                  VALUES('$etudiant_id','$devoir_id','$file')");
+}
+?>
+
+<form method="POST" enctype="multipart/form-data">
+    <input type="file" name="fichier"><br>
+    <button name="submit">Envoyer</button>
+</form>
